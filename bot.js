@@ -25,8 +25,24 @@ client.on("message", msg => {
         modUser(msg.member)
     }
 
-    if (msg.content == "Give me music") {
+    if (msg.content == "$Soundcloud") {
         msg.channel.send("soundcloud.com/unnecessary-roughness-yyc")
+    }
+
+    if (msg.content == "$Twitter") {
+        msg.channel.send("twitter.com/unnecessaryrou4")
+    }
+
+    if (msg.content == "$Facebook") {
+        msg.channel.send("facebook.com/unnecessaryroughnessmusic")
+    }
+
+    if (msg.content == "$Instagram") {
+        msg.channel.send("instagram.com/unnecessary_roughness403/")
+    }
+
+    if (msg.content == "Give me socials") {
+        msg.channel.send("Use the dollar sign and then whatever social site you want.")
     }
 })
 
