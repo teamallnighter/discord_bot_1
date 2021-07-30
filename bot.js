@@ -7,11 +7,20 @@ const client = new Discord.Client({
 
 const BOT_PREFIX = "!"
 const FAM_ME_COMMAND = "fam-me"
+//ARTIST PREFIXS
 const UR_PREFIX = "ur-"
+const SVB_PREFIX = "svb-"
+//SOCIAL COMMANDS
 const SC_COMMAND = "sc"
 const TWT_COMMAND = "twt"
-const SC_URL_PREFIX = "soundcloud.com/"
-const UR_SC_COMMAND = "unnecessary-roughness-yyc"
+//HTTPS
+const URL_PREFIX = "https://"
+//Social Links
+const SC_URL = "soundcloud.com/"
+//Unnecessary Roughness Links
+const UR_SC = "unnecessary-roughness-yyc"
+//SVBHERTZ Links
+const SVB_SC = "svbhertz"
 
 client.on("ready", () => {
     console.log("Our bot is ready to go!!!!")
@@ -31,7 +40,11 @@ client.on("message", msg => {
     }
 
     if (msg.content == `${UR_PREFIX}${SC_COMMAND}`) {
-        msg.channel.send(`${SC_URL_PREFIX}${UR_SC_COMMAND}`)
+        msg.channel.send(`${URL_PREFIX}${SC_URL}${UR_SC}`)
+    }
+
+    if (msg.content == `${SVB_PREFIX}${SC_COMMAND}`) {
+        msg.channel.send(`${URL_PREFIX}${SC_URL}${SVB_SC}`)
     }
 
     if (msg.content == `${UR_PREFIX}${TWT_COMMAND}`) {
