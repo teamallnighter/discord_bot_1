@@ -7,6 +7,11 @@ const client = new Discord.Client({
 
 const BOT_PREFIX = "!"
 const FAM_ME_COMMAND = "fam-me"
+const UR_PREFIX = "ur-"
+const SC_COMMAND = "sc"
+const TWT_COMMAND = "twt"
+const SC_URL_PREFIX = "soundcloud.com/"
+const UR_SC_COMMAND = "unnecessary-roughness-yyc"
 
 client.on("ready", () => {
     console.log("Our bot is ready to go!!!!")
@@ -25,11 +30,11 @@ client.on("message", msg => {
         modUser(msg.member)
     }
 
-    if (msg.content == "$Soundcloud") {
-        msg.channel.send("soundcloud.com/unnecessary-roughness-yyc")
+    if (msg.content == `${UR_PREFIX}${SC_COMMAND}`) {
+        msg.channel.send(`${SC_URL_PREFIX}${UR_SC_COMMAND}`)
     }
 
-    if (msg.content == "$Twitter") {
+    if (msg.content == `${UR_PREFIX}${TWT_COMMAND}`) {
         msg.channel.send("twitter.com/unnecessaryrou4")
     }
 
